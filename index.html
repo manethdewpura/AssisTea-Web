@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AssisTea – Smart Tea Plantation Management App</title>
+  <meta name="description" content="AssisTea is the all-in-one mobile app for tea plantation management. AI-powered scheduling, irrigation control, weather monitoring, and real-time analytics — all in one elegant app." />
+  <meta name="keywords" content="tea plantation, mobile app, irrigation management, AI scheduling, field management, worker assignment, weather monitoring" />
+  <meta property="og:title" content="AssisTea – Smart Tea Plantation Management" />
+  <meta property="og:description" content="Elevate your tea plantation with AI-powered tools, real-time weather insights, and intelligent labor scheduling." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner container">
+      <a href="#" class="nav-logo">
+        <span class="logo-leaf">🌿</span>
+        <span class="logo-text">Assis<span class="logo-accent">Tea</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#roles" class="nav-link">For You</a></li>
+        <li><a href="#tech" class="nav-link">Technology</a></li>
+        <li><a href="#ai" class="nav-link">AI & ML</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-cta">Get Started</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-overlay"></div>
+    <img src="hero_bg.jpg" alt="Tea plantation landscape" class="hero-bg-img" />
+    <div class="hero-particles" id="particles"></div>
+    <div class="container hero-content">
+      <div class="hero-badge animate-fade-up">
+        <span class="badge-dot"></span>
+        React Native · Firebase · AI-Powered
+      </div>
+      <h1 class="hero-title animate-fade-up delay-1">
+        Smarter Tea Plantation<br/><span class="hero-gradient-text">Management</span>
+      </h1>
+      <p class="hero-subtitle animate-fade-up delay-2">
+        The complete mobile solution for modern tea plantations — from AI-driven labor scheduling and smart irrigation control to real-time weather insights and agronomic AI assistance.
+      </p>
+      <div class="hero-actions animate-fade-up delay-3">
+        <a href="#features" class="btn btn-primary">
+          <span>Explore Features</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#roles" class="btn btn-ghost">See How It Works</a>
+      </div>
+      <div class="hero-stats animate-fade-up delay-4">
+        <div class="stat-item">
+          <span class="stat-number">2</span>
+          <span class="stat-label">User Roles</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">10+</span>
+          <span class="stat-label">Core Modules</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">AI</span>
+          <span class="stat-label">ML Scheduling</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Offline Ready</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE STRIP ===== -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>🌿 Irrigation Control</span>
+      <span>🤖 ML Labor Scheduling</span>
+      <span>🌤️ Weather Monitoring</span>
+      <span>📊 Daily Data Analytics</span>
+      <span>👥 Worker Management</span>
+      <span>🌱 Field Management</span>
+      <span>💬 AI Agronomist</span>
+      <span>📋 Smart Schedules</span>
+      <span>🔔 Push Notifications</span>
+      <span>🌿 Irrigation Control</span>
+      <span>🤖 ML Labor Scheduling</span>
+      <span>🌤️ Weather Monitoring</span>
+      <span>📊 Daily Data Analytics</span>
+      <span>👥 Worker Management</span>
+      <span>🌱 Field Management</span>
+      <span>💬 AI Agronomist</span>
+      <span>📋 Smart Schedules</span>
+      <span>🔔 Push Notifications</span>
+    </div>
+  </div>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Core Features</div>
+        <h2 class="section-title">Everything Your Plantation Needs</h2>
+        <p class="section-subtitle">From daily data entry to AI-powered scheduling, AssisTea covers every aspect of modern tea plantation management.</p>
+      </div>
+
+      <div class="features-grid">
+
+        <div class="feature-card feature-card--large" data-aos="fade-up">
+          <div class="feature-card-inner">
+            <div class="feature-icon-wrap" style="--icon-color: #73AB2E;">
+              <span class="feature-icon">🤖</span>
+            </div>
+            <h3 class="feature-title">AI-Powered Labor Scheduling</h3>
+            <p class="feature-desc">Our embedded Feedforward Neural Network (MLP) model intelligently assigns workers to fields based on real historical data, field area, slope, and worker capabilities — generating optimal daily schedules in seconds.</p>
+            <ul class="feature-bullets">
+              <li>TensorFlow Lite on-device inference</li>
+              <li>Global Greedy optimization algorithm</li>
+              <li>Historical performance learning</li>
+              <li>Previous schedule review & comparison</li>
+            </ul>
+            <div class="feature-tag">ML · TFLite · Neural Network</div>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card-inner">
+            <div class="feature-icon-wrap" style="--icon-color: #2196F3;">
+              <span class="feature-icon">💧</span>
+            </div>
+            <h3 class="feature-title">Smart Irrigation & Fertigation</h3>
+            <p class="feature-desc">Precision control of irrigation and fertilization systems with solenoid valve management, sensor monitoring, and automated scheduling.</p>
+            <ul class="feature-bullets">
+              <li>Real-time sensor data display</li>
+              <li>Solenoid valve control</li>
+              <li>Activity log tracking</li>
+            </ul>
+            <div class="feature-tag">IoT · Sensors · Automation</div>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card-inner">
+            <div class="feature-icon-wrap" style="--icon-color: #F4B124;">
+              <span class="feature-icon">🌤️</span>
+            </div>
+            <h3 class="feature-title">Real-Time Weather Monitoring</h3>
+            <p class="feature-desc">Live weather data and multi-day forecasts tailored for plantation conditions, helping managers make smart field decisions every day.</p>
+            <ul class="feature-bullets">
+              <li>Current conditions & forecasts</li>
+              <li>Weather-linked field recommendations</li>
+              <li>Historical weather analytics</li>
+            </ul>
+            <div class="feature-tag">Weather API · Analytics</div>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card-inner">
+            <div class="feature-icon-wrap" style="--icon-color: #9C27B0;">
+              <span class="feature-icon">💬</span>
+            </div>
+            <h3 class="feature-title">AI Agronomist Chat</h3>
+            <p class="feature-desc">Get expert agronomic advice on demand. Our built-in AI assistant answers questions about tea cultivation, pest management, fertilization, and best practices.</p>
+            <ul class="feature-bullets">
+              <li>Conversational AI interface</li>
+              <li>Tea cultivation expertise</li>
+              <li>24/7 availability</li>
+            </ul>
+            <div class="feature-tag">Generative AI · Chat</div>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card-inner">
+            <div class="feature-icon-wrap" style="--icon-color: #FF5722;">
+              <span class="feature-icon">📊</span>
+            </div>
+            <h3 class="feature-title">Daily Data Management</h3>
+            <p class="feature-desc">Log, view, and edit comprehensive daily plantation data with full history browsing, inline editing, and CSV export capabilities.</p>
+            <ul class="feature-bullets">
+              <li>Daily entry & history browsing</li>
+              <li>Inline record editing</li>
+              <li>CSV import/export support</li>
+            </ul>
+            <div class="feature-tag">Analytics · Data Management</div>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card-inner">
+            <div class="feature-icon-wrap" style="--icon-color: #00BCD4;">
+              <span class="feature-icon">👥</span>
+            </div>
+            <h3 class="feature-title">Worker & Field Management</h3>
+            <p class="feature-desc">Manage your entire workforce and field portfolio in one place — add workers with detailed profiles, define fields with area and slope data, and track assignments.</p>
+            <ul class="feature-bullets">
+              <li>Worker profiles & performance</li>
+              <li>Field area & slope tracking</li>
+              <li>Assignment history</li>
+            </ul>
+            <div class="feature-tag">HR · Field Operations</div>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card-inner">
+            <div class="feature-icon-wrap" style="--icon-color: #4CAF50;">
+              <span class="feature-icon">🔔</span>
+            </div>
+            <h3 class="feature-title">Real-Time Notifications</h3>
+            <p class="feature-desc">Stay updated with push notifications for schedule updates, system alerts, and critical plantation events — even in the background.</p>
+            <ul class="feature-bullets">
+              <li>Background fetch support</li>
+              <li>Priority-based alert system</li>
+              <li>System-level notifications</li>
+            </ul>
+            <div class="feature-tag">Push Notifications · Background Sync</div>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card-inner">
+            <div class="feature-icon-wrap" style="--icon-color: #FF9800;">
+              <span class="feature-icon">📶</span>
+            </div>
+            <h3 class="feature-title">Offline-First Architecture</h3>
+            <p class="feature-desc">No internet? No problem. AssisTea caches critical data locally using SQLite and AsyncStorage, syncing automatically when connectivity is restored.</p>
+            <ul class="feature-bullets">
+              <li>SQLite local database</li>
+              <li>Background sync queue</li>
+              <li>Automatic conflict resolution</li>
+            </ul>
+            <div class="feature-tag">Offline · SQLite · Sync</div>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card-inner">
+            <div class="feature-icon-wrap" style="--icon-color: #E91E63;">
+              <span class="feature-icon">🌙</span>
+            </div>
+            <h3 class="feature-title">Dark Mode & Theming</h3>
+            <p class="feature-desc">Full system-aware dark mode with meticulously crafted color palettes for both light and dark environments, ensuring beautiful usability day and night.</p>
+            <ul class="feature-bullets">
+              <li>System-aware auto switching</li>
+              <li>Consistent color tokens</li>
+              <li>Premium UI components</li>
+            </ul>
+            <div class="feature-tag">UI/UX · Accessibility</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROLES ===== -->
+  <section class="roles section" id="roles">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Role-Based Access</div>
+        <h2 class="section-title">Designed for Every Role</h2>
+        <p class="section-subtitle">AssisTea provides tailored dashboards and tools for each user, so everyone has exactly what they need.</p>
+      </div>
+      <div class="roles-grid">
+        <div class="role-card role-card--admin" data-aos="fade-right">
+          <div class="role-badge">Admin</div>
+          <div class="role-icon">⚙️</div>
+          <h3 class="role-name">Plantation Administrator</h3>
+          <p class="role-desc">Full control of the plantation system — create and manage plantations, onboard managers, and monitor the entire operation from a central command center.</p>
+          <ul class="role-features">
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Create & manage tea plantations
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Onboard & assign managers
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Plantation-wide analytics dashboard
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Weather & sensor overview
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              System configuration
+            </li>
+          </ul>
+        </div>
+
+        <div class="role-card role-card--manager" data-aos="fade-left">
+          <div class="role-badge role-badge--manager">Manager</div>
+          <div class="role-icon">🌿</div>
+          <h3 class="role-name">Tea Plantation Manager</h3>
+          <p class="role-desc">Day-to-day operations in one streamlined dashboard — manage workers, log field data, generate AI schedules, and monitor plantation health in real time.</p>
+          <ul class="role-features">
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Daily data entry & history
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Worker & field management
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              AI labor schedule generation
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Weather forecast integration
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              AI agronomist consultation
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI SECTION ===== -->
+  <section class="ai-section section" id="ai">
+    <div class="ai-bg-glow"></div>
+    <div class="container">
+      <div class="ai-grid">
+        <div class="ai-content" data-aos="fade-right">
+          <div class="section-badge">AI & Machine Learning</div>
+          <h2 class="section-title" style="text-align:left;">Intelligence Built Into Every Decision</h2>
+          <p class="ai-desc">AssisTea doesn't just store data — it learns from it. Our embedded ML engine analyzes historical plantation data to generate optimal labor assignments, helping your team work smarter every single day.</p>
+          <div class="ai-features">
+            <div class="ai-feature-item">
+              <div class="ai-feature-icon">🧠</div>
+              <div>
+                <h4>Feedforward Neural Network (MLP)</h4>
+                <p>Multi-Layer Perceptron trained on your plantation's historical records, learning patterns across workers, fields, seasons, and conditions.</p>
+              </div>
+            </div>
+            <div class="ai-feature-item">
+              <div class="ai-feature-icon">⚡</div>
+              <div>
+                <h4>On-Device TensorFlow Lite</h4>
+                <p>Inference runs directly on the device using TFLite — no cloud round-trip needed, ensuring fast predictions even in remote plantations with poor connectivity.</p>
+              </div>
+            </div>
+            <div class="ai-feature-item">
+              <div class="ai-feature-icon">🎯</div>
+              <div>
+                <h4>Global Greedy Optimization</h4>
+                <p>An advanced scheduling algorithm that maximizes overall productivity by optimally matching workers to fields based on multiple weighted parameters simultaneously.</p>
+              </div>
+            </div>
+            <div class="ai-feature-item">
+              <div class="ai-feature-icon">💬</div>
+              <div>
+                <h4>Generative AI Agronomist</h4>
+                <p>Conversational AI assistant powered by state-of-the-art language models, providing real-time agronomic guidance, pest identification, and cultivation advice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ai-visual" data-aos="fade-left">
+          <div class="ai-card-stack">
+            <div class="ai-glow-orb"></div>
+            <div class="ai-floating-card ai-card-1">
+              <div class="ai-card-icon">🤖</div>
+              <div class="ai-card-text">
+                <span class="ai-card-label">ML Model</span>
+                <span class="ai-card-value">Schedule Generated</span>
+              </div>
+              <div class="ai-card-status success">✓ Optimal</div>
+            </div>
+            <div class="ai-floating-card ai-card-2">
+              <div class="ai-card-icon">📈</div>
+              <div class="ai-card-text">
+                <span class="ai-card-label">Productivity Score</span>
+                <span class="ai-card-value">94.7%</span>
+              </div>
+              <div class="ai-progress-bar"><div class="ai-progress-fill" style="width:94.7%"></div></div>
+            </div>
+            <div class="ai-floating-card ai-card-3">
+              <div class="ai-card-icon">👷</div>
+              <div class="ai-card-text">
+                <span class="ai-card-label">Workers Assigned</span>
+                <span class="ai-card-value">24 / 24</span>
+              </div>
+              <div class="ai-card-status success">✓ Full Coverage</div>
+            </div>
+            <div class="ai-floating-card ai-card-4">
+              <div class="ai-card-icon">🌱</div>
+              <div class="ai-card-text">
+                <span class="ai-card-label">Fields Covered</span>
+                <span class="ai-card-value">12 Fields</span>
+              </div>
+              <div class="ai-card-status success">✓ Balanced</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECH STACK ===== -->
+  <section class="tech section" id="tech">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Technology</div>
+        <h2 class="section-title">Built on World-Class Technology</h2>
+        <p class="section-subtitle">AssisTea is crafted with a carefully chosen enterprise-grade tech stack that ensures performance, reliability, and scalability.</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card" data-aos="zoom-in">
+          <div class="tech-logo">⚛️</div>
+          <div class="tech-name">React Native</div>
+          <div class="tech-desc">Cross-platform native mobile performance with a single unified codebase</div>
+        </div>
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="50">
+          <div class="tech-logo">🔷</div>
+          <div class="tech-name">TypeScript</div>
+          <div class="tech-desc">Type-safe development with full IntelliSense and compile-time error prevention</div>
+        </div>
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="tech-logo">🔥</div>
+          <div class="tech-name">Firebase</div>
+          <div class="tech-desc">Authentication, Cloud Firestore real-time database, and backend services</div>
+        </div>
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="150">
+          <div class="tech-logo">🗄️</div>
+          <div class="tech-name">SQLite</div>
+          <div class="tech-desc">On-device relational database for offline-first data persistence</div>
+        </div>
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="tech-logo">🧠</div>
+          <div class="tech-name">TensorFlow Lite</div>
+          <div class="tech-desc">On-device ML inference for real-time labor assignment predictions</div>
+        </div>
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="250">
+          <div class="tech-logo">📦</div>
+          <div class="tech-name">Redux Toolkit</div>
+          <div class="tech-desc">Predictable state management with efficient data flow across the app</div>
+        </div>
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="tech-logo">🧭</div>
+          <div class="tech-name">React Navigation</div>
+          <div class="tech-desc">Native stack and tab navigation with smooth screen transitions</div>
+        </div>
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="350">
+          <div class="tech-logo">🔑</div>
+          <div class="tech-name">Keychain</div>
+          <div class="tech-desc">Secure credential storage using hardware-level security on iOS and Android</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORKFLOW ===== -->
+  <section class="workflow section">
+    <div class="workflow-bg"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">How It Works</div>
+        <h2 class="section-title">Your Plantation, Simplified</h2>
+        <p class="section-subtitle">From morning data entry to AI-generated schedules, AssisTea streamlines every part of your plantation's day.</p>
+      </div>
+      <div class="workflow-steps">
+        <div class="workflow-step" data-aos="fade-up">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <div class="step-icon">🌅</div>
+            <h3>Morning Setup</h3>
+            <p>Log daily weather conditions, field status, and workforce availability. The app syncs everything to the cloud and your local device simultaneously.</p>
+          </div>
+        </div>
+        <div class="workflow-connector"></div>
+        <div class="workflow-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <div class="step-icon">🤖</div>
+            <h3>AI Schedule Generation</h3>
+            <p>Tap "Generate Schedule" — our Neural Network analyzes your data and produces an optimally balanced labor assignment across all fields in seconds.</p>
+          </div>
+        </div>
+        <div class="workflow-connector"></div>
+        <div class="workflow-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <div class="step-icon">📋</div>
+            <h3>Deploy & Monitor</h3>
+            <p>Review and approve the schedule. Workers receive assignments, irrigation systems activate on schedule, and sensors stream live data to your dashboard.</p>
+          </div>
+        </div>
+        <div class="workflow-connector"></div>
+        <div class="workflow-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <div class="step-icon">📈</div>
+            <h3>Analyze & Improve</h3>
+            <p>End the day by reviewing performance data. The ML model learns from each cycle, making every future schedule smarter than the last.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section" id="contact">
+    <div class="cta-glow-1"></div>
+    <div class="cta-glow-2"></div>
+    <div class="container">
+      <div class="cta-inner" data-aos="zoom-in">
+        <div class="cta-badge">🌿 Ready to Transform?</div>
+        <h2 class="cta-title">Elevate Your Tea Plantation<br/>with AssisTea</h2>
+        <p class="cta-subtitle">Join the future of precision tea plantation management. Powerful AI, real-time data, and beautiful design — all in your pocket.</p>
+        <div class="cta-actions">
+          <a href="mailto:info@assistea.app" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get In Touch
+          </a>
+          <a href="https://github.com/manethdewpura/AssisTea-Mobile-App" target="_blank" class="btn btn-outline btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+        <div class="cta-tech-badges">
+          <span>React Native 0.81</span>
+          <span>TypeScript</span>
+          <span>Firebase</span>
+          <span>TensorFlow Lite</span>
+          <span>SQLite</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <span class="logo-leaf">🌿</span>
+            <span class="logo-text">Assis<span class="logo-accent">Tea</span></span>
+          </a>
+          <p class="footer-tagline">Smart Tea Plantation Management for the Modern Age</p>
+          <div class="footer-built-with">
+            Built with React Native · Firebase · AI/ML
+          </div>
+        </div>
+        <div class="footer-links-group">
+          <h4>Features</h4>
+          <ul>
+            <li><a href="#features">AI Scheduling</a></li>
+            <li><a href="#features">Irrigation Control</a></li>
+            <li><a href="#features">Weather Monitoring</a></li>
+            <li><a href="#features">Field Management</a></li>
+            <li><a href="#features">AI Chat Assistant</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#tech">Tech Stack</a></li>
+            <li><a href="#roles">User Roles</a></li>
+            <li><a href="#ai">AI & ML</a></li>
+            <li><a href="https://github.com/manethdewpura/AssisTea-Mobile-App" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AssisTea. Crafted for the tea industry with ❤️</p>
+        <p class="footer-stack-line">React Native · TypeScript · Firebase · TFLite · Redux · SQLite</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
