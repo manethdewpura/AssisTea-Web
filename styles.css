@@ -393,8 +393,6 @@ img { max-width: 100%; display: block; }
   transition: var(--transition);
 }
 .slide-card:hover { border-color: rgba(115,171,46,0.4); transform: translateY(-4px); box-shadow: var(--shadow-glow); }
-.slide-card--pending { opacity: 0.6; }
-.slide-card--pending:hover { transform: none; box-shadow: none; }
 
 .slide-phase {
   font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
