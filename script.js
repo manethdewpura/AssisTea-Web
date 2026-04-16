@@ -105,17 +105,36 @@ tabBtns.forEach(btn => {
   });
 });
 
-// ─── MILESTONE DROPDOWN ───────────────────────────────────
-const milestoneSelect = document.getElementById('milestoneSelect');
-const milestonePanels = document.querySelectorAll('.milestone-panel');
+// ─── CUSTOM MILESTONE DROPDOWN ───────────────────────────
+const milestoneDropdown   = document.getElementById('milestoneDropdown');
+const milestoneSelectedEl = document.getElementById('milestoneSelected');
+const milestoneSelectedTx = document.getElementById('milestoneSelectedText');
+const milestoneOptList    = document.getElementById('milestoneOptions');
+const milestonePanels     = document.querySelectorAll('.milestone-panel');
 
-if (milestoneSelect) {
-  milestoneSelect.addEventListener('change', () => {
-    const val = milestoneSelect.value;
-    milestonePanels.forEach(p => p.classList.remove('active'));
-    const panel = document.getElementById(`milestone-${val}`);
-    if (panel) panel.classList.add('active');
+if (milestoneDropdown) {
+  // Toggle open / close
+  milestoneSelectedEl.addEventListener('click', (e) => {
+    e.stopPropagation();
+    milestoneDropdown.classList.toggle('open');
   });
+
+  // Pick an option
+  milestoneOptList.querySelectorAll('.custom-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      const val = opt.dataset.value;
+      milestoneSelectedTx.textContent = opt.textContent.trim();
+      milestoneOptList.querySelectorAll('.custom-option').forEach(o => o.classList.remove('active'));
+      opt.classList.add('active');
+      milestonePanels.forEach(p => p.classList.remove('active'));
+      const panel = document.getElementById(`milestone-${val}`);
+      if (panel) panel.classList.add('active');
+      milestoneDropdown.classList.remove('open');
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', () => milestoneDropdown.classList.remove('open'));
 }
 
 // ─── CONTACT FORM → MAILTO ───────────────────────────────
