@@ -427,8 +427,8 @@ img { max-width: 100%; display: block; }
 .team-card:hover { border-color: rgba(115,171,46,0.4); transform: translateY(-5px); box-shadow: var(--shadow-glow); }
 .team-card--leader { border-color: rgba(115,171,46,0.35); background: linear-gradient(145deg, rgba(14,64,29,0.6), rgba(115,171,46,0.05)); }
 
-.team-photo-wrap { position: relative; width: 120px; height: 120px; margin: 0 auto 16px; }
-.team-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: top; border: 3px solid var(--c-border); }
+.team-photo-wrap { position: relative; width: 120px; height: 120px; margin: 0 auto 16px; border-radius: 50%; overflow: hidden; border: 3px solid var(--c-border); background: var(--c-card); }
+.team-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; border-radius: 50%; transform: scale(1.08); }
 .team-photo-fallback {
   display: none; width: 120px; height: 120px; border-radius: 50%;
   background: linear-gradient(135deg, var(--c-dark), var(--c-green));
@@ -443,7 +443,8 @@ img { max-width: 100%; display: block; }
   display: inline-block; margin-bottom: 10px;
 }
 .team-name  { font-size: 0.95rem; font-weight: 700; color: var(--c-text); margin-bottom: 5px; }
-.team-role  { font-size: 0.8rem; color: var(--c-text-sub); margin-bottom: 14px; }
+.team-role  { font-size: 0.8rem; color: var(--c-text-sub); margin-bottom: 8px; }
+.team-component { font-size: 0.82rem; color: rgba(244,177,36,0.85); margin-bottom: 14px; font-weight: 650; }
 .team-email {
   font-size: 0.76rem; color: var(--c-green); word-break: break-all;
   transition: var(--transition); display: block;
