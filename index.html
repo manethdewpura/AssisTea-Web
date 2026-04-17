@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AssisTea – Smart Tea Plantation Management App</title>
-  <meta name="description" content="AssisTea is the all-in-one mobile app for tea plantation management. AI-powered scheduling, irrigation control, weather monitoring, and real-time analytics — all in one elegant app." />
-  <meta name="keywords" content="tea plantation, mobile app, irrigation management, AI scheduling, field management, worker assignment, weather monitoring" />
-  <meta property="og:title" content="AssisTea – Smart Tea Plantation Management" />
-  <meta property="og:description" content="Elevate your tea plantation with AI-powered tools, real-time weather insights, and intelligent labor scheduling." />
-  <meta property="og:type" content="website" />
+  <title>AssisTea – Smart Tea Plantation Management | SLIIT CDAP 2025-26</title>
+  <meta name="description" content="AssisTea is an AI-driven, offline-capable mobile application for intelligent tea plantation management, a SLIIT CDAP research project 2025-26." />
+  <meta name="keywords" content="AssisTea, tea plantation, SLIIT CDAP, AI scheduling, smart irrigation, React Native, machine learning" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
@@ -19,28 +16,30 @@
   <!-- ===== NAVIGATION ===== -->
   <nav class="nav" id="navbar">
     <div class="nav-inner container">
-      <a href="#" class="nav-logo">
+      <a href="#home" class="nav-logo">
         <span class="logo-leaf">🌿</span>
         <span class="logo-text">Assis<span class="logo-accent">Tea</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#features" class="nav-link">Features</a></li>
-        <li><a href="#roles" class="nav-link">For You</a></li>
-        <li><a href="#tech" class="nav-link">Technology</a></li>
-        <li><a href="#ai" class="nav-link">AI & ML</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#home"       class="nav-link">Home</a></li>
+        <li><a href="#domain"     class="nav-link">Domain</a></li>
+        <li><a href="#milestones" class="nav-link">Milestones</a></li>
+        <li><a href="#documents"  class="nav-link">Documents</a></li>
+        <li><a href="#slides"     class="nav-link">Slides</a></li>
+        <li><a href="#about"      class="nav-link">About Us</a></li>
+        <li><a href="#contact"    class="nav-link">Contact Us</a></li>
       </ul>
-      <button class="nav-cta">Get Started</button>
       <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="home">
+  <!-- ===== HOME ===== -->
+  <section id="home" class="home-section">
+    <div class="hero">
     <div class="hero-bg-overlay"></div>
-    <img src="hero_bg.jpg" alt="Tea plantation landscape" class="hero-bg-img" />
+    <img src="hero_bg.jpg" alt="Sri Lankan tea plantation landscape" class="hero-bg-img" />
     <div class="hero-particles" id="particles"></div>
     <div class="container hero-content">
       <div class="hero-badge animate-fade-up">
@@ -48,18 +47,12 @@
         React Native · Firebase · AI-Powered
       </div>
       <h1 class="hero-title animate-fade-up delay-1">
-        Smarter Tea Plantation<br/><span class="hero-gradient-text">Management</span>
+        Assis<span class="hero-accent">Tea</span>
       </h1>
-      <p class="hero-subtitle animate-fade-up delay-2">
-        The complete mobile solution for modern tea plantations — from AI-driven labor scheduling and smart irrigation control to real-time weather insights and agronomic AI assistance.
+      <p class="hero-tagline animate-fade-up delay-2">Smart Tea Plantation Management System</p>
+      <p class="hero-subtitle animate-fade-up delay-3">
+       AssisTea is an AI-powered, offline-capable mobile application designed to transform the way small and medium-scale tea estates in Sri Lanka are managed. By unifying machine learning capabilities for intelligent labor scheduling and localized weather forecasting, alongside IoT-driven smart irrigation and a real-time AI agronomist chatbot into a single platform, AssisTea delivers data-driven operational support to plantation managers working in remote, low-connectivity highland environments empowering smarter decisions, reducing costs, and improving harvest yields.
       </p>
-      <div class="hero-actions animate-fade-up delay-3">
-        <a href="#features" class="btn btn-primary">
-          <span>Explore Features</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#roles" class="btn btn-ghost">See How It Works</a>
-      </div>
       <div class="hero-stats animate-fade-up delay-4">
         <div class="stat-item">
           <span class="stat-number">2</span>
@@ -67,13 +60,13 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <span class="stat-number">10+</span>
+          <span class="stat-number">4</span>
           <span class="stat-label">Core Modules</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
           <span class="stat-number">AI</span>
-          <span class="stat-label">ML Scheduling</span>
+          <span class="stat-label">ML Powered</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
@@ -81,476 +74,751 @@
           <span class="stat-label">Offline Ready</span>
         </div>
       </div>
+
     </div>
     <div class="hero-scroll-hint">
       <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
       <span>Scroll to explore</span>
     </div>
-  </section>
+    </div>
 
-  <!-- ===== MARQUEE STRIP ===== -->
-  <div class="marquee-strip">
-    <div class="marquee-track">
-      <span>🌿 Irrigation Control</span>
-      <span>🤖 ML Labor Scheduling</span>
-      <span>🌤️ Weather Monitoring</span>
-      <span>📊 Daily Data Analytics</span>
-      <span>👥 Worker Management</span>
-      <span>🌱 Field Management</span>
-      <span>💬 AI Agronomist</span>
-      <span>📋 Smart Schedules</span>
-      <span>🔔 Push Notifications</span>
-      <span>🌿 Irrigation Control</span>
-      <span>🤖 ML Labor Scheduling</span>
-      <span>🌤️ Weather Monitoring</span>
-      <span>📊 Daily Data Analytics</span>
-      <span>👥 Worker Management</span>
-      <span>🌱 Field Management</span>
-      <span>💬 AI Agronomist</span>
-      <span>📋 Smart Schedules</span>
-      <span>🔔 Push Notifications</span>
+  <!-- ===== RESEARCH JOURNEY ===== -->
+  <div class="section research-journey-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">From Field Research to Final Testing</h2>
+        <p class="section-subtitle">A visual walkthrough of our on-ground research process, including tea estate field visits, stakeholder feedback sessions, and real-world testing activities conducted throughout the AssisTea project.</p>
+      </div>
+
+      <div class="journey-groups">
+        <div class="journey-group">
+          <div class="journey-copy">
+            <h3>Field Visits</h3>
+            <p>We conducted multiple on-site estate visits to capture real operational constraints, observe day-to-day field decision-making, and ground AssisTea's design in authentic plantation workflows rather than lab assumptions.</p>
+          </div>
+          <div class="journey-media">
+            <div class="journey-cluster" data-slider>
+              <button class="journey-nav journey-nav--prev" type="button" aria-label="Previous image">‹</button>
+              <div class="journey-cluster-stage">
+                <figure class="journey-cluster-card is-active">
+                  <img src="./assets/making/field_visit_1.jpeg" alt="Field visit at tea estate 1" class="journey-photo" loading="lazy" />
+                </figure>
+                <figure class="journey-cluster-card is-next">
+                  <img src="./assets/making/field_visit_2.jpeg" alt="Field visit at tea estate 2" class="journey-photo" loading="lazy" />
+                </figure>
+                <figure class="journey-cluster-card is-hidden">
+                  <img src="./assets/making/field_visit_3.jpeg" alt="Field visit at tea estate 3" class="journey-photo" loading="lazy" />
+                </figure>
+                <figure class="journey-cluster-card is-prev">
+                  <img src="./assets/making/field_visit_4.jpeg" alt="Field visit at tea estate 4" class="journey-photo" loading="lazy" />
+                </figure>
+              </div>
+              <button class="journey-nav journey-nav--next" type="button" aria-label="Next image">›</button>
+              <div class="journey-cluster-dots" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-group journey-group--reverse">
+          <div class="journey-copy">
+            <h3>Feedback Gathering</h3>
+            <p>Structured feedback sessions with estate stakeholders helped us sharpen feature priorities, simplify user interaction flows, and continuously align the product with practical needs of managers and workers.</p>
+          </div>
+          <div class="journey-media">
+            <div class="journey-cluster" data-slider>
+              <button class="journey-nav journey-nav--prev" type="button" aria-label="Previous image">‹</button>
+              <div class="journey-cluster-stage">
+                <figure class="journey-cluster-card is-active">
+                  <img src="./assets/making/feedback_1.jpeg" alt="Feedback session with stakeholders 1" class="journey-photo" loading="lazy" />
+                </figure>
+                <figure class="journey-cluster-card is-next">
+                  <img src="./assets/making/feedback_2.jpeg" alt="Feedback session with stakeholders 2" class="journey-photo" loading="lazy" />
+                </figure>
+                <figure class="journey-cluster-card is-prev">
+                  <img src="./assets/making/feedback_3.jpeg" alt="Feedback session with stakeholders 3" class="journey-photo" loading="lazy" />
+                </figure>
+              </div>
+              <button class="journey-nav journey-nav--next" type="button" aria-label="Next image">›</button>
+              <div class="journey-cluster-dots" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-group">
+          <div class="journey-copy">
+            <h3>System Testing</h3>
+            <p>Comprehensive testing rounds validated module accuracy, UI stability, and reliability under realistic usage conditions, ensuring the final system performs consistently in production-like environments.</p>
+          </div>
+          <div class="journey-media">
+            <div class="journey-cluster" data-slider>
+              <button class="journey-nav journey-nav--prev" type="button" aria-label="Previous image">‹</button>
+              <div class="journey-cluster-stage">
+                <figure class="journey-cluster-card is-active">
+                  <img src="./assets/making/testing_1.jpeg" alt="System testing session 1" class="journey-photo" loading="lazy" />
+                </figure>
+                <figure class="journey-cluster-card is-next">
+                  <img src="./assets/making/testing_2.jpeg" alt="System testing session 2" class="journey-photo" loading="lazy" />
+                </figure>
+                <figure class="journey-cluster-card is-prev">
+                  <img src="./assets/making/testing_3.jpeg" alt="System testing session 3" class="journey-photo" loading="lazy" />
+                </figure>
+              </div>
+              <button class="journey-nav journey-nav--next" type="button" aria-label="Next image">›</button>
+              <div class="journey-cluster-dots" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  </section>
 
-  <!-- ===== FEATURES ===== -->
-  <section class="features section" id="features">
+  <!-- ===== DOMAIN ===== -->
+  <section id="domain" class="section domain-section">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">Core Features</div>
-        <h2 class="section-title">Everything Your Plantation Needs</h2>
-        <p class="section-subtitle">From daily data entry to AI-powered scheduling, AssisTea covers every aspect of modern tea plantation management.</p>
+        <div class="section-badge">Domain</div>
+        <h2 class="section-title">Research Domain</h2>
+        <p class="section-subtitle">Explore the academic and technical foundations of AssisTea, from the literature that shaped its design to the objectives that drive its development.</p>
       </div>
 
-      <div class="features-grid">
-
-        <div class="feature-card feature-card--large" data-aos="fade-up">
-          <div class="feature-card-inner">
-            <div class="feature-icon-wrap" style="--icon-color: #73AB2E;">
-              <span class="feature-icon">🤖</span>
-            </div>
-            <h3 class="feature-title">AI-Powered Labor Scheduling</h3>
-            <p class="feature-desc">Our embedded Feedforward Neural Network (MLP) model intelligently assigns workers to fields based on real historical data, field area, slope, and worker capabilities — generating optimal daily schedules in seconds.</p>
-            <ul class="feature-bullets">
-              <li>TensorFlow Lite on-device inference</li>
-              <li>Global Greedy optimization algorithm</li>
-              <li>Historical performance learning</li>
-              <li>Previous schedule review & comparison</li>
-            </ul>
-            <div class="feature-tag">ML · TFLite · Neural Network</div>
-          </div>
-        </div>
-
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card-inner">
-            <div class="feature-icon-wrap" style="--icon-color: #2196F3;">
-              <span class="feature-icon">💧</span>
-            </div>
-            <h3 class="feature-title">Smart Irrigation & Fertigation</h3>
-            <p class="feature-desc">Precision control of irrigation and fertilization systems with solenoid valve management, sensor monitoring, and automated scheduling.</p>
-            <ul class="feature-bullets">
-              <li>Real-time sensor data display</li>
-              <li>Solenoid valve control</li>
-              <li>Activity log tracking</li>
-            </ul>
-            <div class="feature-tag">IoT · Sensors · Automation</div>
-          </div>
-        </div>
-
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card-inner">
-            <div class="feature-icon-wrap" style="--icon-color: #F4B124;">
-              <span class="feature-icon">🌤️</span>
-            </div>
-            <h3 class="feature-title">Real-Time Weather Monitoring</h3>
-            <p class="feature-desc">Live weather data and multi-day forecasts tailored for plantation conditions, helping managers make smart field decisions every day.</p>
-            <ul class="feature-bullets">
-              <li>Current conditions & forecasts</li>
-              <li>Weather-linked field recommendations</li>
-              <li>Historical weather analytics</li>
-            </ul>
-            <div class="feature-tag">Weather API · Analytics</div>
-          </div>
-        </div>
-
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card-inner">
-            <div class="feature-icon-wrap" style="--icon-color: #9C27B0;">
-              <span class="feature-icon">💬</span>
-            </div>
-            <h3 class="feature-title">AI Agronomist Chat</h3>
-            <p class="feature-desc">Get expert agronomic advice on demand. Our built-in AI assistant answers questions about tea cultivation, pest management, fertilization, and best practices.</p>
-            <ul class="feature-bullets">
-              <li>Conversational AI interface</li>
-              <li>Tea cultivation expertise</li>
-              <li>24/7 availability</li>
-            </ul>
-            <div class="feature-tag">Generative AI · Chat</div>
-          </div>
-        </div>
-
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card-inner">
-            <div class="feature-icon-wrap" style="--icon-color: #FF5722;">
-              <span class="feature-icon">📊</span>
-            </div>
-            <h3 class="feature-title">Daily Data Management</h3>
-            <p class="feature-desc">Log, view, and edit comprehensive daily plantation data with full history browsing, inline editing, and CSV export capabilities.</p>
-            <ul class="feature-bullets">
-              <li>Daily entry & history browsing</li>
-              <li>Inline record editing</li>
-              <li>CSV import/export support</li>
-            </ul>
-            <div class="feature-tag">Analytics · Data Management</div>
-          </div>
-        </div>
-
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature-card-inner">
-            <div class="feature-icon-wrap" style="--icon-color: #00BCD4;">
-              <span class="feature-icon">👥</span>
-            </div>
-            <h3 class="feature-title">Worker & Field Management</h3>
-            <p class="feature-desc">Manage your entire workforce and field portfolio in one place — add workers with detailed profiles, define fields with area and slope data, and track assignments.</p>
-            <ul class="feature-bullets">
-              <li>Worker profiles & performance</li>
-              <li>Field area & slope tracking</li>
-              <li>Assignment history</li>
-            </ul>
-            <div class="feature-tag">HR · Field Operations</div>
-          </div>
-        </div>
-
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card-inner">
-            <div class="feature-icon-wrap" style="--icon-color: #4CAF50;">
-              <span class="feature-icon">🔔</span>
-            </div>
-            <h3 class="feature-title">Real-Time Notifications</h3>
-            <p class="feature-desc">Stay updated with push notifications for schedule updates, system alerts, and critical plantation events — even in the background.</p>
-            <ul class="feature-bullets">
-              <li>Background fetch support</li>
-              <li>Priority-based alert system</li>
-              <li>System-level notifications</li>
-            </ul>
-            <div class="feature-tag">Push Notifications · Background Sync</div>
-          </div>
-        </div>
-
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card-inner">
-            <div class="feature-icon-wrap" style="--icon-color: #FF9800;">
-              <span class="feature-icon">📶</span>
-            </div>
-            <h3 class="feature-title">Offline-First Architecture</h3>
-            <p class="feature-desc">No internet? No problem. AssisTea caches critical data locally using SQLite and AsyncStorage, syncing automatically when connectivity is restored.</p>
-            <ul class="feature-bullets">
-              <li>SQLite local database</li>
-              <li>Background sync queue</li>
-              <li>Automatic conflict resolution</li>
-            </ul>
-            <div class="feature-tag">Offline · SQLite · Sync</div>
-          </div>
-        </div>
-
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature-card-inner">
-            <div class="feature-icon-wrap" style="--icon-color: #E91E63;">
-              <span class="feature-icon">🌙</span>
-            </div>
-            <h3 class="feature-title">Dark Mode & Theming</h3>
-            <p class="feature-desc">Full system-aware dark mode with meticulously crafted color palettes for both light and dark environments, ensuring beautiful usability day and night.</p>
-            <ul class="feature-bullets">
-              <li>System-aware auto switching</li>
-              <li>Consistent color tokens</li>
-              <li>Premium UI components</li>
-            </ul>
-            <div class="feature-tag">UI/UX · Accessibility</div>
-          </div>
-        </div>
-
+      <div class="domain-tabs" role="tablist">
+        <button class="tab-btn active" data-tab="lit-survey"   role="tab">Literature Survey</button>
+        <button class="tab-btn"        data-tab="research-gap" role="tab">Research Gap</button>
+        <button class="tab-btn"        data-tab="problem"      role="tab">Research Problem</button>
+        <button class="tab-btn"        data-tab="objectives"   role="tab">Objectives</button>
+        <button class="tab-btn"        data-tab="methodology"  role="tab">Methodology</button>
+        <button class="tab-btn"        data-tab="technologies" role="tab">Technologies</button>
       </div>
+
+      <div class="domain-content">
+
+        <!-- Literature Survey -->
+        <div class="tab-panel active" id="tab-lit-survey">
+          <div class="domain-panel-inner">
+            <div class="domain-icon">📚</div>
+            <h3>Literature Survey</h3>
+            <p>Tea plantation management in Sri Lanka remains predominantly manual and operationally fragmented. A growing body of research explores digital solutions for agricultural management, ranging from IoT-based precision irrigation systems to mobile crop-monitoring tools. Yet the majority are designed for large-scale, well-connected farming environments with reliable digital infrastructure.</p>
+            <p>An analysis of over 30 peer-reviewed publications across precision agriculture, offline mobile architectures, IoT sensor networks, machine learning-based scheduling, and AI chatbot systems reveals a consistent pattern: existing solutions do not adequately address the unique operational realities of small and medium-scale Sri Lankan tea estates. These estates operate in highland terrain with intermittent connectivity, irregular field topology, and limited technical literacy among field workers, conditions that existing systems fail to account for in their design.</p>
+            <p>This literature survey established the evidence base for AssisTea's core design philosophy: an offline-first, AI-augmented system that delivers intelligent decision support, environmental automation, and agronomic guidance without dependence on persistent cloud connectivity.</p>
+            <div class="domain-highlights">
+              <div class="highlight-item"><span>🔍</span> Precision Agriculture &amp; IoT Irrigation Systems</div>
+              <div class="highlight-item"><span>🤖</span> ML-Based Scheduling in Crop Management</div>
+              <div class="highlight-item"><span>📱</span> Offline-First Mobile Architecture Patterns</div>
+              <div class="highlight-item"><span>🌿</span> Sri Lankan Tea Industry Operational Research</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Gap -->
+        <div class="tab-panel" id="tab-research-gap">
+          <div class="domain-panel-inner">
+            <div class="domain-icon">🔬</div>
+            <h3>Research Gap</h3>
+            <p>Despite significant advances in agricultural technology, a critical and underserved gap exists for small and medium-scale tea plantations operating in low-connectivity rural environments. Current solutions fail across four interconnected dimensions:</p>
+            <div class="gap-list">
+              <div class="gap-item">
+                <div class="gap-number">01</div>
+                <div class="gap-text">
+                  <h4>Offline-Capable AI Labor Scheduling</h4>
+                  <p>No existing solution provides on-device machine learning inference for labor-to-field assignment that learns from historical plantation data and accounts for field-specific characteristics such as slope and cultivated area without requiring cloud connectivity to operate.</p>
+                </div>
+              </div>
+              <div class="gap-item">
+                <div class="gap-number">02</div>
+                <div class="gap-text">
+                  <h4>Terrain-Aware Irrigation Control</h4>
+                  <p>Current irrigation management systems do not account for the slope differentials inherent in tiered tea plantations, resulting in either over-irrigation of lower-elevation fields or chronic under-irrigation of elevated plots leading to preventable resource wastage and yield loss.</p>
+                </div>
+              </div>
+              <div class="gap-item">
+                <div class="gap-number">03</div>
+                <div class="gap-text">
+                  <h4>Integrated Real-Time AI Agronomist</h4>
+                  <p>Field managers working in remote estates lack access to agronomic expertise when decisions are most critical. No existing mobile platform integrates a conversational AI assistant capable of providing context-aware crop guidance, pest identification, and cultivation advice in the field environment.</p>
+                </div>
+              </div>
+              <div class="gap-item">
+                <div class="gap-number">04</div>
+                <div class="gap-text">
+                  <h4>Edge-Based Weather Prediction</h4>
+                  <p>Current agribusiness platforms rely exclusively on continuous internet access to fetch third-party weather data, creating a critical vulnerability for remote estates. No integrated system currently utilizes edge-deployed ML models, such as 1D CNNs to generate accurate, localized weather forecasts directly on-site, a capability essential for proactive resource and labor allocation in disconnected environments.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Problem -->
+        <div class="tab-panel" id="tab-problem">
+          <div class="domain-panel-inner">
+            <div class="domain-icon">❓</div>
+            <h3>Research Problem</h3>
+            <div class="problem-context">
+              <div class="problem-block">
+                <h4>🌍 Context</h4>
+                <p>Small and medium-scale tea estates in Sri Lanka operate in low-connectivity rural environments with challenging highland terrain. These plantations manage complex daily operations including labor assignment across multiple fields, irrigation scheduling, and agronomic decision-making with minimal digital infrastructure and no access to real-time expert support.</p>
+              </div>
+              <div class="problem-block">
+                <h4>⚠️ Measured Pain Points</h4>
+                <ul class="problem-list">
+                  <li>Inefficient labor-to-field pairing driven by subjective, experience-based judgment rather than data-driven optimization</li>
+                  <li>Unpredictable, manually-managed irrigation with no adaptation for weather conditions or terrain slope differentials</li>
+                  <li>Complete absence of accessible, real-time agronomic expert guidance while managers are deployed in the field</li>
+                </ul>
+              </div>
+              <div class="problem-block">
+                <h4>📉 Impact</h4>
+                <p>These combined inefficiencies result in elevated operational costs, significant resource wastage across water, fertilizer, and labour hours, and consistently reduced harvest yields, all stemming from subjective, manually-driven decision-making that cannot scale alongside the complexity of modern plantation management demands.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Objectives -->
+        <div class="tab-panel" id="tab-objectives">
+          <div class="domain-panel-inner">
+            <div class="domain-icon">🎯</div>
+            <h3>Research Objectives</h3>
+            <p class="objective-intro">To design and develop an offline-capable, AI-driven system that enhances agricultural decision-making, operational efficiency, and autonomy in small and medium-scale tea plantations in Sri Lanka, through intelligent field support, resilient automation, and data-driven labour efficiency management within a one-year research timeline.</p>
+            <div class="objectives-list">
+              <div class="objective-item">
+                <div class="obj-number">01</div>
+                <div class="obj-text">
+                  <h4>AI-Driven Labor Scheduling</h4>
+                  <p>Design and implement an offline-capable machine learning system using a Feedforward Neural Network (MLP) with TensorFlow Lite on-device inference, enabling optimal daily labor assignment across plantation fields based on historical records, field area, slope, and worker performance data.</p>
+                </div>
+              </div>
+              <div class="objective-item">
+                <div class="obj-number">02</div>
+                <div class="obj-text">
+                  <h4>Smart Irrigation &amp; Fertigation Automation</h4>
+                  <p>Develop an IoT-integrated irrigation and fertigation control system that automates water and fertilizer delivery schedules with awareness of terrain slope, live sensor readings, and weather forecast data reducing manual intervention and resource overuse.</p>
+                </div>
+              </div>
+              <div class="objective-item">
+                <div class="obj-number">03</div>
+                <div class="obj-text">
+                  <h4>AI Agronomist Integration</h4>
+                  <p>Integrate a conversational AI assistant powered by a state-of-the-art language model, providing real-time, context-aware agronomic guidance on pest management, fertilization, harvest timing, and field best practices directly within the mobile application.</p>
+                </div>
+              </div>
+              <div class="objective-item">
+                <div class="obj-number">04</div>
+                <div class="obj-text">
+                  <h4>Offline-First Architecture</h4>
+                  <p>Build a resilient offline-first data layer using SQLite local storage and an intelligent background sync queue, ensuring full operational continuity in zero-connectivity environments and seamless cloud reconciliation when connectivity is restored.</p>
+                </div>
+              </div>
+              <div class="objective-item">
+                <div class="obj-number">05</div>
+                <div class="obj-text">
+                  <h4>Role-Based Mobile Platform</h4>
+                  <p>Create a cross-platform mobile application with clearly defined role-based access control, delivering tailored dashboards and tool sets for plantation administrators and field managers within a single unified, production-ready application.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Methodology -->
+        <div class="tab-panel" id="tab-methodology">
+          <div class="domain-panel-inner">
+            <div class="domain-icon">⚙️</div>
+            <h3>Methodology</h3>
+            <p>AssisTea was developed following an Agile methodology with iterative development sprints, enabling continuous validation of research hypotheses and rapid adaptation based on structured feedback from each formal milestone assessment.</p>
+            <div class="method-steps">
+              <div class="method-step">
+                <div class="method-phase">Phase 1</div>
+                <h4>Research &amp; Requirements</h4>
+                <p>Conducted a comprehensive literature survey, formulated the research problem, defined measurable objectives, and finalized the system architecture design. Technology selection was completed and the project proposal was drafted and submitted.</p>
+              </div>
+              <div class="method-step">
+                <div class="method-phase">Phase 2</div>
+                <h4>System Foundation</h4>
+                <p>Firebase project setup, SQLite schema design, React Native application scaffolding with Redux state management, role-based navigation architecture implementation, and offline sync service development.</p>
+              </div>
+              <div class="method-step">
+                <div class="method-phase">Phase 3</div>
+                <h4>Core Module Development</h4>
+                <p>Parallel development of all five core modules: ML labor scheduling (MLP neural network training and TFLite embedding), predictive weather forecasting (Edge-deployed ML model), smart irrigation/fertigation control (IoT sensor integration and valve automation), AI agronomist chatbot (Generative AI API integration), and a comprehensive daily data management system.</p>
+              </div>
+              <div class="method-step">
+                <div class="method-phase">Phase 4</div>
+                <h4>Integration &amp; Validation</h4>
+                <p>Full cross-module system integration, performance validation of the ML model against baseline heuristics, user acceptance testing with plantation workflows, end-to-end offline/online sync verification, and final production-ready polishing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technologies -->
+        <div class="tab-panel" id="tab-technologies">
+          <div class="domain-panel-inner">
+            <div class="domain-icon">🔧</div>
+            <h3>Technologies Used</h3>
+            <p>AssisTea is built on a carefully selected, enterprise-grade technology stack designed to deliver performance, offline resilience, and embedded AI capabilities within a single cross-platform mobile application.</p>
+            <div class="tech-grid-small">
+              <div class="tech-item"><span class="tech-emoji">⚛️</span><strong>React Native 0.81</strong><p>Cross-platform native mobile performance from a unified codebase targeting both iOS and Android</p></div>
+              <div class="tech-item"><span class="tech-emoji">🔷</span><strong>TypeScript</strong><p>Type-safe development with compile-time error prevention and full IntelliSense support</p></div>
+              <div class="tech-item"><span class="tech-emoji">🔥</span><strong>Firebase</strong><p>Cloud authentication, Firestore real-time database, and backend services for cloud-side sync</p></div>
+              <div class="tech-item"><span class="tech-emoji">🗄️</span><strong>SQLite</strong><p>On-device relational database providing the offline-first local data persistence layer</p></div>
+              <div class="tech-item"><span class="tech-emoji">🧠</span><strong>TensorFlow Lite</strong><p>On-device ML inference engine for running the labor scheduling, weather forecasting and neural network locally</p></div>
+              <div class="tech-item"><span class="tech-emoji">📦</span><strong>Redux Toolkit</strong><p>Predictable global state management ensuring consistent data flow across all app modules</p></div>
+              <div class="tech-item"><span class="tech-emoji">🧭</span><strong>React Navigation</strong><p>Native stack and tab-based navigation with smooth, platform-consistent screen transitions</p></div>
+              <div class="tech-item"><span class="tech-emoji">🤖</span><strong>Generative AI (LLM)</strong><p>Conversational AI agronomist powered by a state-of-the-art large language model API</p></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end domain-content -->
     </div>
   </section>
 
-  <!-- ===== ROLES ===== -->
-  <section class="roles section" id="roles">
+  <!-- ===== MILESTONES ===== -->
+  <section id="milestones" class="section milestones-section">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">Role-Based Access</div>
-        <h2 class="section-title">Designed for Every Role</h2>
-        <p class="section-subtitle">AssisTea provides tailored dashboards and tools for each user, so everyone has exactly what they need.</p>
+        <div class="section-badge">Milestones</div>
+        <h2 class="section-title">Project Milestones</h2>
+        <p class="section-subtitle">Track all formal assessments and key deliverables across the project lifecycle. Select a milestone below to view its full details.</p>
       </div>
-      <div class="roles-grid">
-        <div class="role-card role-card--admin" data-aos="fade-right">
-          <div class="role-badge">Admin</div>
-          <div class="role-icon">⚙️</div>
-          <h3 class="role-name">Plantation Administrator</h3>
-          <p class="role-desc">Full control of the plantation system — create and manage plantations, onboard managers, and monitor the entire operation from a central command center.</p>
-          <ul class="role-features">
-            <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-              Create & manage tea plantations
-            </li>
-            <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-              Onboard & assign managers
-            </li>
-            <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-              Plantation-wide analytics dashboard
-            </li>
-            <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-              Weather & sensor overview
-            </li>
-            <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-              System configuration
-            </li>
-          </ul>
-        </div>
 
-        <div class="role-card role-card--manager" data-aos="fade-left">
-          <div class="role-badge role-badge--manager">Manager</div>
-          <div class="role-icon">🌿</div>
-          <h3 class="role-name">Tea Plantation Manager</h3>
-          <p class="role-desc">Day-to-day operations in one streamlined dashboard — manage workers, log field data, generate AI schedules, and monitor plantation health in real time.</p>
-          <ul class="role-features">
-            <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-              Daily data entry & history
-            </li>
-            <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-              Worker & field management
-            </li>
-            <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-              AI labor schedule generation
-            </li>
-            <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-              Weather forecast integration
-            </li>
-            <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-              AI agronomist consultation
-            </li>
-          </ul>
+      <div class="milestone-selector-wrap">
+        <label>Select a Milestone:</label>
+        <div class="custom-select" id="milestoneDropdown">
+          <div class="custom-select-selected" id="milestoneSelected">
+            <span id="milestoneSelectedText">📋&nbsp; Project Proposal &amp; Viva</span>
+            <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="custom-select-options" id="milestoneOptions">
+            <div class="custom-option active" data-value="proposal">📋&nbsp; Project Proposal &amp; Viva</div>
+            <div class="custom-option" data-value="pp1">📊&nbsp; Progress Presentation 1 (PP1)</div>
+            <div class="custom-option" data-value="pp2">📈&nbsp; Progress Presentation 2 (PP2)</div>
+            <div class="custom-option" data-value="final">🏆&nbsp; Final Assessment</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ===== AI SECTION ===== -->
-  <section class="ai-section section" id="ai">
-    <div class="ai-bg-glow"></div>
-    <div class="container">
-      <div class="ai-grid">
-        <div class="ai-content" data-aos="fade-right">
-          <div class="section-badge">AI & Machine Learning</div>
-          <h2 class="section-title" style="text-align:left;">Intelligence Built Into Every Decision</h2>
-          <p class="ai-desc">AssisTea doesn't just store data — it learns from it. Our embedded ML engine analyzes historical plantation data to generate optimal labor assignments, helping your team work smarter every single day.</p>
-          <div class="ai-features">
-            <div class="ai-feature-item">
-              <div class="ai-feature-icon">🧠</div>
-              <div>
-                <h4>Feedforward Neural Network (MLP)</h4>
-                <p>Multi-Layer Perceptron trained on your plantation's historical records, learning patterns across workers, fields, seasons, and conditions.</p>
-              </div>
-            </div>
-            <div class="ai-feature-item">
-              <div class="ai-feature-icon">⚡</div>
-              <div>
-                <h4>On-Device TensorFlow Lite</h4>
-                <p>Inference runs directly on the device using TFLite — no cloud round-trip needed, ensuring fast predictions even in remote plantations with poor connectivity.</p>
-              </div>
-            </div>
-            <div class="ai-feature-item">
-              <div class="ai-feature-icon">🎯</div>
-              <div>
-                <h4>Global Greedy Optimization</h4>
-                <p>An advanced scheduling algorithm that maximizes overall productivity by optimally matching workers to fields based on multiple weighted parameters simultaneously.</p>
-              </div>
-            </div>
-            <div class="ai-feature-item">
-              <div class="ai-feature-icon">💬</div>
-              <div>
-                <h4>Generative AI Agronomist</h4>
-                <p>Conversational AI assistant powered by state-of-the-art language models, providing real-time agronomic guidance, pest identification, and cultivation advice.</p>
-              </div>
+      <!-- Milestone: Proposal -->
+      <div class="milestone-panel active" id="milestone-proposal">
+        <div class="milestone-header">
+          <span class="milestone-icon">📋</span>
+          <div>
+            <h3>Project Proposal &amp; Viva</h3>
+            <div class="milestone-meta">
+              <span class="meta-tag">📅 Report Deadline: 15 August 2025</span>
+              <span class="meta-tag">🎤 Presentation: 8 – 12 September 2025</span>
+              <span class="meta-tag marks">📊 Total Weight: 12%</span>
             </div>
           </div>
         </div>
-        <div class="ai-visual" data-aos="fade-left">
-          <div class="ai-card-stack">
-            <div class="ai-glow-orb"></div>
-            <div class="ai-floating-card ai-card-1">
-              <div class="ai-card-icon">🤖</div>
-              <div class="ai-card-text">
-                <span class="ai-card-label">ML Model</span>
-                <span class="ai-card-value">Schedule Generated</span>
-              </div>
-              <div class="ai-card-status success">✓ Optimal</div>
+        <div class="milestone-body">
+          <p>The Project Proposal is the first formal milestone, establishing the academic and commercial foundation of the research. The assessment opens with a two-minute promotional video that introduces the real-world problem and its impact, accompanied by a high-level system diagram illustrating the proposed solution's architecture and component relationships.</p>
+          <p>Each student is then allocated exactly three minutes to present their individual component, focusing specifically on the knowledge gap they are addressing, the specialized technologies selected, and a clear, structured implementation roadmap. The session concludes with a group analysis of the project's commercialization potential, covering estimated investment costs, pricing strategies, and target market profiles for the proposed solution.</p>
+          <div class="milestone-marks-grid">
+            <div class="marks-item">
+              <span class="marks-value">6%</span>
+              <span class="marks-label">Proposal Report</span>
             </div>
-            <div class="ai-floating-card ai-card-2">
-              <div class="ai-card-icon">📈</div>
-              <div class="ai-card-text">
-                <span class="ai-card-label">Productivity Score</span>
-                <span class="ai-card-value">94.7%</span>
-              </div>
-              <div class="ai-progress-bar"><div class="ai-progress-fill" style="width:94.7%"></div></div>
+            <div class="marks-item">
+              <span class="marks-value">6%</span>
+              <span class="marks-label">Proposal Presentation</span>
             </div>
-            <div class="ai-floating-card ai-card-3">
-              <div class="ai-card-icon">👷</div>
-              <div class="ai-card-text">
-                <span class="ai-card-label">Workers Assigned</span>
-                <span class="ai-card-value">24 / 24</span>
-              </div>
-              <div class="ai-card-status success">✓ Full Coverage</div>
-            </div>
-            <div class="ai-floating-card ai-card-4">
-              <div class="ai-card-icon">🌱</div>
-              <div class="ai-card-text">
-                <span class="ai-card-label">Fields Covered</span>
-                <span class="ai-card-value">12 Fields</span>
-              </div>
-              <div class="ai-card-status success">✓ Balanced</div>
+            <div class="marks-item marks-total">
+              <span class="marks-value">12%</span>
+              <span class="marks-label">Combined Total</span>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Milestone: PP1 -->
+      <div class="milestone-panel" id="milestone-pp1">
+        <div class="milestone-header">
+          <span class="milestone-icon">📊</span>
+          <div>
+            <h3>Progress Presentation 1 (PP1)</h3>
+            <div class="milestone-meta">
+              <span class="meta-tag">📅 Date: 5 – 9 January 2026</span>
+              <span class="meta-tag">⏱ Duration: 20 Minutes per Team</span>
+              <span class="meta-tag marks">📊 Total Weight: 15%</span>
+            </div>
+          </div>
+        </div>
+        <div class="milestone-body">
+          <p>Progress Presentation 1 is a critical individual milestone that serves as an academic reality check, verifying that each student is on track to effectively solve their stated research problem while exposing any design gaps, technical inconsistencies, or unanticipated implementation challenges early enough in the development cycle to allow meaningful course correction.</p>
+          <p>Each student must demonstrate that at least 50% of their technical product is functionally complete, presented through a live demo, simulation, or working software prototype. The 20-minute team session is scored across three components: individual presentation quality, the depth and clarity of the technical demonstration, and performance in a viva Q&amp;A session with the panel. For mobile applications, demonstrations must be conducted via emulator, physical devices are not permitted.</p>
+          <p>The prototype may range from an initial alpha to a pre-alpha release, provided it runs successfully and showcases meaningful system features with realistic data rather than basic interface elements such as login screens.</p>
+          <div class="milestone-marks-grid">
+            <div class="marks-item">
+              <span class="marks-value">30</span>
+              <span class="marks-label">Presentation (marks)</span>
+            </div>
+            <div class="marks-item">
+              <span class="marks-value">10</span>
+              <span class="marks-label">Technical Demo (marks)</span>
+            </div>
+            <div class="marks-item">
+              <span class="marks-value">12</span>
+              <span class="marks-label">Q&amp;A Viva (marks)</span>
+            </div>
+            <div class="marks-item marks-total">
+              <span class="marks-value">15%</span>
+              <span class="marks-label">Total Weight</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Milestone: PP2 -->
+      <div class="milestone-panel" id="milestone-pp2">
+        <div class="milestone-header">
+          <span class="milestone-icon">📈</span>
+          <div>
+            <h3>Progress Presentation 2 (PP2)</h3>
+            <div class="milestone-meta">
+              <span class="meta-tag">📅 Date: 9 – 12 March 2026</span>
+              <span class="meta-tag">⏱ Duration: 45 Minutes per Team</span>
+              <span class="meta-tag marks">📊 Total Weight: 18%</span>
+            </div>
+          </div>
+        </div>
+        <div class="milestone-body">
+          <p>Progress Presentation 2 is a comprehensive 45-minute team assessment evaluating the depth of system integration, research maturity, and the team's ability to demonstrate a near-complete, cohesive product. A randomly selected team member opens with a five-minute project overview before the group delivers a 30-minute integrated live demonstration spanning all four system modules working together seamlessly.</p>
+          <p>At this stage, the system must be at least 90% complete with full cross-module integration clearly demonstrated. Research maturity is assessed through data-backed performance claims, baseline comparisons against existing approaches, and evidence of meaningful experimental validation with real or representative data. The scoring framework is weighted heavily toward Solution Implementation (40%) and Applied Knowledge (20%), alongside communication quality and the team's articulation of the project's commercialization potential.</p>
+          <p>Teams must ensure they bring all required hardware including laptops, HDMI cables, and extension cords and maintain a pre-recorded backup video as a contingency plan for technical failures during the live demonstration.</p>
+          <div class="milestone-marks-grid">
+            <div class="marks-item">
+              <span class="marks-value">40%</span>
+              <span class="marks-label">Solution Implementation</span>
+            </div>
+            <div class="marks-item">
+              <span class="marks-value">20%</span>
+              <span class="marks-label">Applying Knowledge</span>
+            </div>
+            <div class="marks-item marks-total">
+              <span class="marks-value">18%</span>
+              <span class="marks-label">Total Weight</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Milestone: Final -->
+      <div class="milestone-panel" id="milestone-final">
+        <div class="milestone-header">
+          <span class="milestone-icon">🏆</span>
+          <div>
+            <h3>Final Assessment</h3>
+            <div class="milestone-meta">
+              <span class="meta-tag">📅 Date: 27th April – 6th May 2026</span>
+              <span class="meta-tag marks">📊 Total Weight: 55%</span>
+            </div>
+          </div>
+        </div>
+        <div class="milestone-body">
+          <p>The Final Assessment is the most comprehensive evaluation of the project, representing 55% of the overall module grade. It is the culmination of an entire year of research, development, and iterative refinement and at this stage, examiners expect a fully completed, production-ready system that satisfies every stated research objective with no missing requirements, unresolved defects, or incomplete features.</p>
+          <p>The evaluation panel will rigorously examine each student's understanding of the AI and machine learning components embedded within the system including how models were designed, trained, validated, and integrated into the production application. Students must be prepared to defend their architectural decisions, explain their code at a granular level, discuss edge cases and system limitations, and demonstrate awareness of scalability, deployment considerations, and real-world operational constraints.</p>
+          <p>Beyond the live system demonstration, the final assessment encompasses a comprehensive set of written and digital deliverables including individual and group reports, a research paper, a project logbook, this website, and checklist documentation each contributing to the holistic evaluation of the team's research output and professional standard.</p>
+          <div class="milestone-marks-grid">
+            <div class="marks-item">
+              <span class="marks-value">15%</span>
+              <span class="marks-label">Final Report (Individual)</span>
+            </div>
+            <div class="marks-item">
+              <span class="marks-value">10%</span>
+              <span class="marks-label">Final Presentation</span>
+            </div>
+            <div class="marks-item">
+              <span class="marks-value">10%</span>
+              <span class="marks-label">Viva</span>
+            </div>
+            <div class="marks-item">
+              <span class="marks-value">10%</span>
+              <span class="marks-label">Research Paper</span>
+            </div>
+            <div class="marks-item">
+              <span class="marks-value">4%</span>
+              <span class="marks-label">Final Report (Group)</span>
+            </div>
+            <div class="marks-item">
+              <span class="marks-value">2%</span>
+              <span class="marks-label">Website</span>
+            </div>
+            <div class="marks-item">
+              <span class="marks-value">2%</span>
+              <span class="marks-label">Check Lists</span>
+            </div>
+            <div class="marks-item">
+              <span class="marks-value">2%</span>
+              <span class="marks-label">Logbook</span>
+            </div>
+            <div class="marks-item marks-total">
+              <span class="marks-value">55%</span>
+              <span class="marks-label">Combined Total</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ===== TECH STACK ===== -->
-  <section class="tech section" id="tech">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Technology</div>
-        <h2 class="section-title">Built on World-Class Technology</h2>
-        <p class="section-subtitle">AssisTea is crafted with a carefully chosen enterprise-grade tech stack that ensures performance, reliability, and scalability.</p>
-      </div>
-      <div class="tech-grid">
-        <div class="tech-card" data-aos="zoom-in">
-          <div class="tech-logo">⚛️</div>
-          <div class="tech-name">React Native</div>
-          <div class="tech-desc">Cross-platform native mobile performance with a single unified codebase</div>
-        </div>
-        <div class="tech-card" data-aos="zoom-in" data-aos-delay="50">
-          <div class="tech-logo">🔷</div>
-          <div class="tech-name">TypeScript</div>
-          <div class="tech-desc">Type-safe development with full IntelliSense and compile-time error prevention</div>
-        </div>
-        <div class="tech-card" data-aos="zoom-in" data-aos-delay="100">
-          <div class="tech-logo">🔥</div>
-          <div class="tech-name">Firebase</div>
-          <div class="tech-desc">Authentication, Cloud Firestore real-time database, and backend services</div>
-        </div>
-        <div class="tech-card" data-aos="zoom-in" data-aos-delay="150">
-          <div class="tech-logo">🗄️</div>
-          <div class="tech-name">SQLite</div>
-          <div class="tech-desc">On-device relational database for offline-first data persistence</div>
-        </div>
-        <div class="tech-card" data-aos="zoom-in" data-aos-delay="200">
-          <div class="tech-logo">🧠</div>
-          <div class="tech-name">TensorFlow Lite</div>
-          <div class="tech-desc">On-device ML inference for real-time labor assignment predictions</div>
-        </div>
-        <div class="tech-card" data-aos="zoom-in" data-aos-delay="250">
-          <div class="tech-logo">📦</div>
-          <div class="tech-name">Redux Toolkit</div>
-          <div class="tech-desc">Predictable state management with efficient data flow across the app</div>
-        </div>
-        <div class="tech-card" data-aos="zoom-in" data-aos-delay="300">
-          <div class="tech-logo">🧭</div>
-          <div class="tech-name">React Navigation</div>
-          <div class="tech-desc">Native stack and tab navigation with smooth screen transitions</div>
-        </div>
-        <div class="tech-card" data-aos="zoom-in" data-aos-delay="350">
-          <div class="tech-logo">🔑</div>
-          <div class="tech-name">Keychain</div>
-          <div class="tech-desc">Secure credential storage using hardware-level security on iOS and Android</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WORKFLOW ===== -->
-  <section class="workflow section">
-    <div class="workflow-bg"></div>
+  <!-- ===== DOCUMENTS ===== -->
+  <section id="documents" class="section documents-section">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">How It Works</div>
-        <h2 class="section-title">Your Plantation, Simplified</h2>
-        <p class="section-subtitle">From morning data entry to AI-generated schedules, AssisTea streamlines every part of your plantation's day.</p>
+        <div class="section-badge">Documents</div>
+        <h2 class="section-title">Project Documents</h2>
+        <p class="section-subtitle">All formal project documents, reports, and submission files. Click any card to view the documents on SharePoint.</p>
       </div>
-      <div class="workflow-steps">
-        <div class="workflow-step" data-aos="fade-up">
-          <div class="step-number">01</div>
-          <div class="step-content">
-            <div class="step-icon">🌅</div>
-            <h3>Morning Setup</h3>
-            <p>Log daily weather conditions, field status, and workforce availability. The app syncs everything to the cloud and your local device simultaneously.</p>
+      <div class="docs-grid">
+        <div class="doc-card">
+          <div class="doc-icon">📄</div>
+          <div class="doc-info">
+            <h3>Project Charter</h3>
+            <p>The foundational project charter document outlining the project scope, objectives, team responsibilities, and initial research direction.</p>
+            <div class="doc-status available">✓ Available</div>
           </div>
+          <a href="https://drive.google.com/file/d/1C42njO_yZUw7TH4wPJpJ6ahI4RmuU1m8/view?usp=drive_link" target="_blank" rel="noopener" class="doc-btn">View Document →</a>
         </div>
-        <div class="workflow-connector"></div>
-        <div class="workflow-step" data-aos="fade-up" data-aos-delay="100">
-          <div class="step-number">02</div>
-          <div class="step-content">
-            <div class="step-icon">🤖</div>
-            <h3>AI Schedule Generation</h3>
-            <p>Tap "Generate Schedule" — our Neural Network analyzes your data and produces an optimally balanced labor assignment across all fields in seconds.</p>
+
+        <div class="doc-card">
+          <div class="doc-icon">📋</div>
+          <div class="doc-info">
+            <h3>Proposal Document</h3>
+            <p>The full research proposal report covering the problem statement, literature survey, objectives, methodology, and commercialization plan.</p>
+            <div class="doc-status available">✓ Available</div>
           </div>
+          <a href="https://mysliit.sharepoint.com/:f:/s/CDAPSubmissionCloud/IgAVOZw5YFFiSJc1lqxDYZFJAbmJPd5IE_d77mNnn3l1IEE?e=klMUSK" target="_blank" rel="noopener" class="doc-btn">View Document →</a>
         </div>
-        <div class="workflow-connector"></div>
-        <div class="workflow-step" data-aos="fade-up" data-aos-delay="200">
-          <div class="step-number">03</div>
-          <div class="step-content">
-            <div class="step-icon">📋</div>
-            <h3>Deploy & Monitor</h3>
-            <p>Review and approve the schedule. Workers receive assignments, irrigation systems activate on schedule, and sensors stream live data to your dashboard.</p>
+
+        <div class="doc-card">
+          <div class="doc-icon">✅</div>
+          <div class="doc-info">
+            <h3>Check List Documents</h3>
+            <p>Formal assessment check lists submitted across project milestones, ensuring all evaluation criteria and deliverables have been met.</p>
+            <div class="doc-status available">✓ Available</div>
           </div>
+          <a href="https://mysliit.sharepoint.com/:f:/s/CDAPSubmissionCloud/IgCdM5Y0JltkQbCm40RxvXMfAbjoodsGB4HNj4P6JTTWKIQ?e=7mpxMx" target="_blank" rel="noopener" class="doc-btn">View Documents →</a>
         </div>
-        <div class="workflow-connector"></div>
-        <div class="workflow-step" data-aos="fade-up" data-aos-delay="300">
-          <div class="step-number">04</div>
-          <div class="step-content">
-            <div class="step-icon">📈</div>
-            <h3>Analyze & Improve</h3>
-            <p>End the day by reviewing performance data. The ML model learns from each cycle, making every future schedule smarter than the last.</p>
+
+        <div class="doc-card">
+          <div class="doc-icon">🏆</div>
+          <div class="doc-info">
+            <h3>Final Document</h3>
+            <p>The complete final documentation set including individual and group reports, research paper, logbook, and all supporting final submission materials (4 documents).</p>
+            <div class="doc-status available">✓ Available</div>
           </div>
+          <a href="https://mysliit.sharepoint.com/:f:/s/CDAPSubmissionCloud/IgAs3xIiLQobTZFAM8O4jA7KAbDmUvvfiImr83y9E6f-TeY?e=FmI67B" target="_blank" rel="noopener" class="doc-btn">View Documents →</a>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SLIDES ===== -->
+  <section id="slides" class="section slides-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Slides</div>
+        <h2 class="section-title">Presentation Slides</h2>
+        <p class="section-subtitle">Access the slide decks used in all formal project presentations throughout the research timeline.</p>
+      </div>
+      <div class="slides-grid">
+
+        <div class="slide-card">
+          <div class="slide-phase">Phase 01</div>
+          <div class="slide-icon">📋</div>
+          <h3>Project Proposal</h3>
+          <p class="slide-date">September 2025</p>
+          <p class="slide-desc">Introduction of the research problem, 2-minute promotional video, individual component breakdown, and group commercialization analysis.</p>
+          <a href="https://mysliit.sharepoint.com/:p:/s/CDAPSubmissionCloud/IQCtLshfe8jwSIMLuufuFqLyAW5ZEBAYsZiJFUD6tI9nxpk?e=roUPT4" target="_blank" rel="noopener" class="slide-btn">View Slides →</a>
+        </div>
+
+        <div class="slide-card">
+          <div class="slide-phase">Phase 02</div>
+          <div class="slide-icon">📊</div>
+          <h3>Progress Presentation 1</h3>
+          <p class="slide-date">January 2026</p>
+          <p class="slide-desc">50% system completion demonstration, individual component deep-dive, live prototype demo via emulator, and examiners Q&amp;A viva.</p>
+          <a href="https://mysliit.sharepoint.com/:p:/s/CDAPSubmissionCloud/IQDwECb_dmwJRqbFo2ol0ymmAcdvm14IZt7xZDREJLMWu8A?e=xn1FuD" target="_blank" rel="noopener" class="slide-btn">View Slides →</a>
+        </div>
+
+        <div class="slide-card">
+          <div class="slide-phase">Phase 03</div>
+          <div class="slide-icon">📈</div>
+          <h3>Progress Presentation 2</h3>
+          <p class="slide-date">March 2026</p>
+          <p class="slide-desc">Integrated 90%+ complete system across all four modules, data-backed research maturity evidence, and commercialization strategy.</p>
+          <a href="https://mysliit.sharepoint.com/:p:/s/CDAPSubmissionCloud/IQDEeJdMK4dYR5Bzw8OrvUC5AXAvdyYWHyl2xBktU-5BAMw?e=QjtwLn" target="_blank" rel="noopener" class="slide-btn">View Slides →</a>
+        </div>
+
+        <div class="slide-card">
+          <div class="slide-phase">Phase 04</div>
+          <div class="slide-icon">🏆</div>
+          <h3>Final Presentation</h3>
+          <p class="slide-date">April 2026</p>
+          <p class="slide-desc">Complete system demonstration, AI/ML architecture deep-dive, code knowledge defence, and full research findings presentation to the examiner panel.</p>
+          <a href="https://mysliit.sharepoint.com/:f:/s/CDAPSubmissionCloud/IgDEqJ8xCl67TZpXrjrzzXZfASjFV68-9Kl4CMxheWyTwPY?e=BHJ31Y" target="_blank" rel="noopener" class="slide-btn">View Slides →</a>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
-  <section class="cta-section" id="contact">
-    <div class="cta-glow-1"></div>
-    <div class="cta-glow-2"></div>
+  <!-- ===== ABOUT US ===== -->
+  <section id="about" class="section about-section">
     <div class="container">
-      <div class="cta-inner" data-aos="zoom-in">
-        <div class="cta-badge">🌿 Ready to Transform?</div>
-        <h2 class="cta-title">Elevate Your Tea Plantation<br/>with AssisTea</h2>
-        <p class="cta-subtitle">Join the future of precision tea plantation management. Powerful AI, real-time data, and beautiful design — all in your pocket.</p>
-        <div class="cta-actions">
-          <a href="mailto:info@assistea.app" class="btn btn-primary btn-lg">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Get In Touch
-          </a>
-          <a href="https://github.com/manethdewpura/AssisTea-Mobile-App" target="_blank" class="btn btn-outline btn-lg">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            View on GitHub
-          </a>
+      <div class="section-header">
+        <div class="section-badge">About Us</div>
+        <h2 class="section-title">Meet the Team</h2>
+        <p class="section-subtitle">AssisTea is developed by a team of four undergraduate researchers at SLIIT, each leading a distinct technical component of the system.</p>
+      </div>
+      <div class="team-grid team-grid-supervisors">
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="./assets/images/dr kalpani.jpg" alt="Dr. Kalpani Manathunga" class="team-photo"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="team-photo-fallback">K</div>
+          </div>
+          <h3 class="team-name">Dr. Kalpani Manathunga</h3>
+          <p class="team-role team-role--supervisor">Supervisor</p>
+          <a href="mailto:kalpani.m@sliit.lk" class="team-email">kalpani.m@sliit.lk</a>
         </div>
-        <div class="cta-tech-badges">
-          <span>React Native 0.81</span>
-          <span>TypeScript</span>
-          <span>Firebase</span>
-          <span>TensorFlow Lite</span>
-          <span>SQLite</span>
+
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="./assets/images/ms aparna.jpeg" alt="Ms. Aparna Jayawardena" class="team-photo"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="team-photo-fallback">A</div>
+          </div>
+          <h3 class="team-name">Ms. Aparna Jayawardena</h3>
+          <p class="team-role team-role--co-supervisor">Co-supervisor</p>
+          <a href="mailto:aparna.j@sliit.lk" class="team-email">aparna.j@sliit.lk</a>
         </div>
+      </div>
+      <div class="team-grid team-grid-members">
+
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="./assets/images/maneth.jpg" alt="Dewpura D. A. M. M" class="team-photo"
+              style="transform: scale(1.08) translateX(2%); object-position: center 15%;"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="team-photo-fallback">D</div>
+          </div>
+          <h3 class="team-name">Dewpura D. A. M. M</h3>
+          <p class="team-role team-role--leader">Team Leader</p>
+          <p class="team-component">Worked on: Latency Sensitive Automated Irrigation Control</p>
+          <a href="mailto:dewpuramaneth@gmail.com" class="team-email">dewpuramaneth@gmail.com</a>
+        </div>
+
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="./assets/images/nethsiluni.jpg" alt="Nethsiluni A. S" class="team-photo"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="team-photo-fallback">N</div>
+          </div>
+          <h3 class="team-name">Nethsiluni A. S</h3>
+          <p class="team-role team-role--member">Team Member</p>
+          <p class="team-component">Worked on: Offline Agronomist Assistant</p>
+          <a href="mailto:sandithinethsiluni@gmail.com" class="team-email">sandithinethsiluni@gmail.com</a>
+        </div>
+
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="./assets/images/rupasinghe.jpg" alt="Rupasinghe R. A. R. P" class="team-photo"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="team-photo-fallback">R</div>
+          </div>
+          <h3 class="team-name">Rupasinghe R. A. R. P</h3>
+          <p class="team-role team-role--member">Team Member</p>
+          <p class="team-component">Worked on: Predictive Caching for Weather Forecasting</p>
+          <a href="mailto:ridmirupasinghe228@gmail.com" class="team-email">ridmirupasinghe228@gmail.com</a>
+        </div>
+
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="./assets/images/kuruppu.jpg" alt="Kuruppu K. A. N. H" class="team-photo"
+              style="object-position: center 2%;"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="team-photo-fallback">K</div>
+          </div>
+          <h3 class="team-name">Kuruppu K. A. N. H</h3>
+          <p class="team-role team-role--member">Team Member</p>
+          <p class="team-component">Worked on: ML Based Labour Assignment</p>
+          <a href="mailto:nethminihiranya2@gmail.com" class="team-email">nethminihiranya2@gmail.com</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT US ===== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Contact Us</div>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Have questions about our research or the AssisTea application? We would love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon">🏫</div>
+              <div>
+                <strong>Institution</strong>
+                <p>Sri Lanka Institute of Information Technology (SLIIT)</p>
+                <p>CDAP Research Project · 2025 – 2026</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📬</div>
+              <div>
+                <strong>Official Email</strong>
+                <a href="mailto:assistea.official@gmail.com">assistea.official@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <strong>Team Emails</strong>
+                <a href="mailto:dewpuramaneth@gmail.com">dewpuramaneth@gmail.com</a>
+                <a href="mailto:sandithinethsiluni@gmail.com">sandithinethsiluni@gmail.com</a>
+                <a href="mailto:ridmirupasinghe228@gmail.com">ridmirupasinghe228@gmail.com</a>
+                <a href="mailto:nethminihiranya2@gmail.com">nethminihiranya2@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <h3>Send a Message</h3>
+          <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" placeholder="Enter your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" placeholder="Enter your email address" required />
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" placeholder="What is your inquiry about?" />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message ✉</button>
+          </form>
+        </div>
+
       </div>
     </div>
   </section>
@@ -560,38 +828,32 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <a href="#" class="nav-logo">
+          <a href="#home" class="nav-logo">
             <span class="logo-leaf">🌿</span>
             <span class="logo-text">Assis<span class="logo-accent">Tea</span></span>
           </a>
-          <p class="footer-tagline">Smart Tea Plantation Management for the Modern Age</p>
-          <div class="footer-built-with">
-            Built with React Native · Firebase · AI/ML
-          </div>
+          <p class="footer-tagline">AI-Driven Tea Plantation Management · SLIIT CDAP 2025 – 2026</p>
         </div>
         <div class="footer-links-group">
-          <h4>Features</h4>
+          <h4>Navigation</h4>
           <ul>
-            <li><a href="#features">AI Scheduling</a></li>
-            <li><a href="#features">Irrigation Control</a></li>
-            <li><a href="#features">Weather Monitoring</a></li>
-            <li><a href="#features">Field Management</a></li>
-            <li><a href="#features">AI Chat Assistant</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#domain">Domain</a></li>
+            <li><a href="#milestones">Milestones</a></li>
+            <li><a href="#documents">Documents</a></li>
           </ul>
         </div>
         <div class="footer-links-group">
-          <h4>Platform</h4>
+          <h4>More</h4>
           <ul>
-            <li><a href="#tech">Tech Stack</a></li>
-            <li><a href="#roles">User Roles</a></li>
-            <li><a href="#ai">AI & ML</a></li>
-            <li><a href="https://github.com/manethdewpura/AssisTea-Mobile-App" target="_blank">GitHub</a></li>
+            <li><a href="#slides">Slides</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 AssisTea. Crafted for the tea industry with ❤️</p>
-        <p class="footer-stack-line">React Native · TypeScript · Firebase · TFLite · Redux · SQLite</p>
+        <p>© 2026 AssisTea · SLIIT CDAP Research Project · All Rights Reserved</p>
       </div>
     </div>
   </footer>
