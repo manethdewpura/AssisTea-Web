@@ -426,7 +426,7 @@ img { max-width: 100%; display: block; }
 .team-card--leader { border-color: rgba(115,171,46,0.35); background: linear-gradient(145deg, rgba(14,64,29,0.6), rgba(115,171,46,0.05)); }
 
 .team-photo-wrap { position: relative; width: 120px; height: 120px; margin: 0 auto 16px; border-radius: 50%; overflow: hidden; border: 3px solid var(--c-border); background: var(--c-card); }
-.team-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; border-radius: 50%; transform: scale(1.08); }
+.team-photo { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; border-radius: 50%; transform: scale(1.08); }
 .team-photo-fallback {
   display: none; width: 120px; height: 120px; border-radius: 50%;
   background: linear-gradient(135deg, var(--c-dark), var(--c-green));
