@@ -145,7 +145,7 @@ function handleFormSubmit(e) {
   const subject = document.getElementById('contactSubject').value.trim() || 'AssisTea Research Inquiry';
   const message = document.getElementById('contactMessage').value.trim();
   const body    = `From: ${name} (${email})\n\n${message}`;
-  window.location.href = `mailto:dewpuramaneth@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:assistea.official@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 // ─── CARD HOVER TILT ──────────────────────────────────────
