@@ -163,4 +163,62 @@ document.querySelectorAll('.doc-card, .slide-card, .team-card, .tech-item').forE
   });
 });
 
+// ─── RESEARCH JOURNEY CLUSTER SLIDERS ─────────────────────
+document.querySelectorAll('[data-slider]').forEach(slider => {
+  const cards = Array.from(slider.querySelectorAll('.journey-cluster-card'));
+  const prevBtn = slider.querySelector('.journey-nav--prev');
+  const nextBtn = slider.querySelector('.journey-nav--next');
+  const dotsWrap = slider.querySelector('.journey-cluster-dots');
+  if (!cards.length || !dotsWrap) return;
+
+  let index = 0;
+  let timerId;
+
+  // Build indicator dots based on image count.
+  cards.forEach(() => {
+    const dot = document.createElement('span');
+    dot.className = 'journey-dot';
+    dotsWrap.appendChild(dot);
+  });
+  const dots = Array.from(dotsWrap.querySelectorAll('.journey-dot'));
+
+  const render = () => {
+    const total = cards.length;
+    const prevIdx = (index - 1 + total) % total;
+    const nextIdx = (index + 1) % total;
+
+    cards.forEach((card, idx) => {
+      card.classList.remove('is-active', 'is-prev', 'is-next', 'is-hidden');
+      if (idx === index) card.classList.add('is-active');
+      else if (idx === prevIdx) card.classList.add('is-prev');
+      else if (idx === nextIdx) card.classList.add('is-next');
+      else card.classList.add('is-hidden');
+    });
+
+    dots.forEach((dot, idx) => dot.classList.toggle('is-active', idx === index));
+  };
+
+  const goNext = () => {
+    index = (index + 1) % cards.length;
+    render();
+  };
+
+  const goPrev = () => {
+    index = (index - 1 + cards.length) % cards.length;
+    render();
+  };
+
+  const start = () => {
+    if (timerId) clearInterval(timerId);
+    timerId = setInterval(goNext, 3500);
+  };
+  const stop = () => { if (timerId) clearInterval(timerId); };
+
+  if (prevBtn) prevBtn.addEventListener('click', () => { goPrev(); stop(); start(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { goNext(); stop(); start(); });
+
+  render();
+  start();
+});
+
 console.log('%c🌿 AssisTea Website Loaded', 'color:#73AB2E;font-size:14px;font-weight:bold;');
