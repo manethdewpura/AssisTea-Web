@@ -75,20 +75,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ─── ACTIVE NAV LINK HIGHLIGHTING ────────────────────────
-const sections    = document.querySelectorAll('section[id]');
-const navLinkEls  = document.querySelectorAll('.nav-link');
-const sectionObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.id;
-      navLinkEls.forEach(link => {
-        link.classList.remove('active-link');
-        if (link.getAttribute('href') === `#${id}`) link.classList.add('active-link');
-      });
-    }
+const sections   = Array.from(document.querySelectorAll('section[id]'));
+const navLinkEls = document.querySelectorAll('.nav-link');
+
+function updateActiveNavLink() {
+  const scrollY = window.scrollY;
+  const navOffset = 90;
+  let activeId = sections[0]?.id;
+
+  sections.forEach(section => {
+    const top = section.offsetTop - navOffset;
+    if (scrollY >= top) activeId = section.id;
   });
-}, { threshold: 0.35 });
-sections.forEach(s => sectionObserver.observe(s));
+
+  navLinkEls.forEach(link => {
+    link.classList.toggle('active-link', link.getAttribute('href') === `#${activeId}`);
+  });
+}
+
+window.addEventListener('scroll', updateActiveNavLink, { passive: true });
+window.addEventListener('load', updateActiveNavLink);
+updateActiveNavLink();
 
 // ─── DOMAIN TABS ─────────────────────────────────────────
 const tabBtns   = document.querySelectorAll('.tab-btn');
