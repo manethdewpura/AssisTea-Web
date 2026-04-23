@@ -573,6 +573,18 @@
         <h2 class="section-title">Project Documents</h2>
         <p class="section-subtitle">All formal project documents, reports, and submission files. Click any card to view the documents on SharePoint.</p>
       </div>
+      <div class="docs-search-wrap">
+        <label class="docs-search-label" for="docSearchInput">Search available documents</label>
+        <input
+          type="search"
+          id="docSearchInput"
+          class="docs-search-input"
+          placeholder="Search by title, description, or keyword..."
+          aria-describedby="docsSearchMeta"
+        />
+        <div class="docs-search-results" id="docsSearchResults" hidden></div>
+        <p class="docs-search-meta" id="docsSearchMeta">Showing all available documents.</p>
+      </div>
       <div class="docs-grid">
         <div class="doc-card">
           <div class="doc-icon">📄</div>
@@ -614,6 +626,7 @@
           <a href="https://mysliit.sharepoint.com/:f:/s/CDAPSubmissionCloud/IgAs3xIiLQobTZFAM8O4jA7KAbDmUvvfiImr83y9E6f-TeY?e=FmI67B" target="_blank" rel="noopener" class="doc-btn">View Documents →</a>
         </div>
       </div>
+      <p class="docs-empty-state" id="docsEmptyState" hidden>No available documents match your search.</p>
 
     </div>
   </section>

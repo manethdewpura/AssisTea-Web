@@ -473,6 +473,76 @@ img { max-width: 100%; display: block; }
 /* ─── DOCUMENTS ────────────────────────────────────────── */
 .documents-section { background: var(--c-bg-light); }
 
+.docs-search-wrap {
+  max-width: 640px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+.docs-search-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-text-sub);
+  margin-bottom: 8px;
+}
+.docs-search-input {
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  color: var(--c-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  padding: 12px 14px;
+  transition: var(--transition);
+}
+.docs-search-input::placeholder { color: rgba(141,169,143,0.5); }
+.docs-search-input:focus {
+  outline: none;
+  border-color: var(--c-green);
+  background: rgba(14,64,29,0.2);
+}
+.docs-search-meta {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--c-text-sub);
+}
+.docs-search-results {
+  margin-top: 8px;
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.docs-search-result-item {
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid var(--c-border);
+  background: transparent;
+  color: var(--c-text);
+  padding: 10px 12px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: var(--transition);
+}
+.docs-search-result-item:last-child { border-bottom: none; }
+.docs-search-result-item:hover {
+  background: rgba(115,171,46,0.12);
+}
+.docs-search-result-title {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+.docs-search-result-link {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.76rem;
+  color: var(--c-text-sub);
+}
+
 .docs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 
 .doc-card {
@@ -496,6 +566,17 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid var(--c-border); transition: var(--transition);
 }
 .doc-btn:hover { color: var(--c-text); letter-spacing: 0.02em; }
+
+.docs-empty-state {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--c-text-sub);
+  background: rgba(0,0,0,0.2);
+  border: 1px dashed var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
 
 /* ─── SLIDES ───────────────────────────────────────────── */
 .slides-section { background: var(--c-bg); }
