@@ -144,6 +144,107 @@ if (milestoneDropdown) {
   document.addEventListener('click', () => milestoneDropdown.classList.remove('open'));
 }
 
+// ─── DOCUMENT SEARCH ──────────────────────────────────────
+const docSearchInput = document.getElementById('docSearchInput');
+const docsMeta = document.getElementById('docsSearchMeta');
+const docsEmptyState = document.getElementById('docsEmptyState');
+const docsSearchResults = document.getElementById('docsSearchResults');
+const docCards = Array.from(document.querySelectorAll('.docs-grid .doc-card'));
+
+if (docSearchInput && docCards.length) {
+  const normalize = (value) => value.toLowerCase().trim();
+  const indexedDocs = docCards.map((card) => {
+    const statusText = normalize(card.querySelector('.doc-status')?.textContent || '');
+    const title = (card.querySelector('h3')?.textContent || '').trim();
+    const link = card.querySelector('.doc-btn')?.getAttribute('href') || '';
+    return {
+      card,
+      title,
+      link,
+      isAvailable: statusText.includes('available'),
+      // Index the full card text so title, description, status, and button text are all searchable.
+      searchableText: normalize(card.textContent || '')
+    };
+  });
+
+  const getMatches = (query) => {
+    return indexedDocs.filter((doc) => doc.isAvailable && (!query || doc.searchableText.includes(query)));
+  };
+
+  const renderSearchResults = (matches, query) => {
+    if (!docsSearchResults) return;
+    if (!query || !matches.length) {
+      docsSearchResults.hidden = true;
+      docsSearchResults.innerHTML = '';
+      return;
+    }
+
+    const topMatches = matches.slice(0, 5);
+    docsSearchResults.innerHTML = topMatches.map((doc) => `
+      <button type="button" class="docs-search-result-item" data-doc-link="${doc.link}">
+        <span class="docs-search-result-title">${doc.title || 'Document'}</span>
+        <span class="docs-search-result-link">Open matching document</span>
+      </button>
+    `).join('');
+    docsSearchResults.hidden = false;
+  };
+
+  const updateDocumentResults = () => {
+    const query = normalize(docSearchInput.value);
+    const matches = getMatches(query);
+    const matchedSet = new Set(matches.map((doc) => doc.card));
+
+    indexedDocs.forEach((doc) => {
+      const show = matchedSet.has(doc.card);
+      doc.card.hidden = !show;
+    });
+    const visibleCount = matches.length;
+    renderSearchResults(matches, query);
+
+    if (docsMeta) {
+      docsMeta.textContent = query
+        ? `Showing ${visibleCount} available result${visibleCount === 1 ? '' : 's'} for "${docSearchInput.value.trim()}".`
+        : `Showing all available documents (${visibleCount}).`;
+    }
+    if (docsEmptyState) docsEmptyState.hidden = visibleCount > 0;
+  };
+
+  ['input', 'search', 'keyup', 'change'].forEach((eventName) => {
+    docSearchInput.addEventListener(eventName, updateDocumentResults);
+  });
+
+  docSearchInput.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter') return;
+    const query = normalize(docSearchInput.value);
+    if (!query) return;
+    const firstMatch = getMatches(query)[0];
+    if (!firstMatch?.link) return;
+    event.preventDefault();
+    window.open(firstMatch.link, '_blank', 'noopener');
+  });
+
+  if (docsSearchResults) {
+    docsSearchResults.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+      const button = target.closest('.docs-search-result-item');
+      if (!(button instanceof HTMLElement)) return;
+      const link = button.dataset.docLink;
+      if (link) window.open(link, '_blank', 'noopener');
+    });
+
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+      const clickedInsideSearch = target.closest('.docs-search-wrap');
+      if (!clickedInsideSearch) docsSearchResults.hidden = true;
+    });
+  }
+
+  docSearchInput.addEventListener('focus', updateDocumentResults);
+  updateDocumentResults();
+}
+
 // ─── CONTACT FORM → MAILTO ───────────────────────────────
 function handleFormSubmit(e) {
   e.preventDefault();
